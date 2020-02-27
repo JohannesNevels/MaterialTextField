@@ -158,6 +158,7 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
     [NSLayoutConstraint activateConstraints:@[self.errorLabelTopConstraint, bottom, leading, trailing]];
     
     self.errorLabelZeroHeightConstraint = [self.errorLabel.heightAnchor constraintEqualToConstant:0];
+    self.errorLabelZeroHeightConstraint.priority = UILayoutPriorityDefaultHigh;
     self.errorLabelZeroHeightConstraint.active = !self.hasError;
 }
 
